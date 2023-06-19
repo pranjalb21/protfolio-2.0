@@ -1,0 +1,110 @@
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    z-index: 1;
+}
+
+
+.navbar{
+    margin: 0 auto;
+}
+
+ul{
+    display: flex;
+}
+
+ul li{
+    list-style: none;
+    margin: 1rem;
+}
+ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #000;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    border-bottom: 3px solid saddlebrown;
+}
+
+.changer {
+    display: flex;
+    margin-right: 1.5rem;
+}
+
+.changer .menu{
+    cursor: pointer;
+    margin-right: 1rem;
+    display: none;
+}
+
+.closed .close{
+    display: none;
+}
+
+@media screen and (max-width: 730px){
+    .header{
+        justify-content: space-between;
+    }
+
+    .navbar{
+        display: none;
+        transition: 1s ease;
+    }
+    
+    .navbar active{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        inset: 0;
+        background: white;
+        transition: 1.4s ease;
+    }
+
+    ul{
+        margin: 0 auto;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    ul li{
+        margin-block: 2rem;
+    }
+    ul li a {
+        font-size: 20px;
+        color: black;
+        font-weight: bolder;
+    }
+
+    .changer .menu {
+        display: block;
+    }
+    .closed .close{
+        display: block;
+    }
+    .header_logo{
+        margin-left: .5rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    ul{
+        margin: 0 auto;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    ul li{
+        margin-block: 2rem;
+    }
+    ul li a {
+        font-size: 20px;
+        color: black;
+        font-weight: bolder;
+    }
+}
